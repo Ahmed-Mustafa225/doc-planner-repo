@@ -167,6 +167,7 @@ header{
 }
 
 .stats{
+    display: flex;
     padding:20px 200px ;
     height: 600px;
     width: 2000px;
@@ -179,7 +180,6 @@ header{
 .sectaion3-headrer h1{
     padding-bottom: 30px;
     padding-left: 200px;
-    position: absolute;
     color: #00b39b;
     font-size: 2em;
     font-weight: 300;
@@ -187,7 +187,7 @@ header{
 
 .sectaion3-headrer p {
     padding-top: 150px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     padding-left: 200px;
 }
 
