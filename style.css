@@ -9,25 +9,9 @@
 
     
 }
-
-
-header{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px 150px;
-    background-color: rgb(252, 252, 252);
-    position: fixed;
-    z-index: 999;
-    align-items: center;
-}
-
-.navigation{
-    text-decoration:none;
-    color: rgb(204, 210, 216);
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 30px;
+.navbar-expand-lg-navbar-light-bg-light{
+    flex-grow:unset;
+    
 }
 
 .main-section{
@@ -69,9 +53,9 @@ header{
 }
 .cards-section{
     display: flex;
-    justify-content: center;
+    flex-wrap:inherit;
     gap: 10px;
-    width: 80%;
+    width: 1050px;
     margin: 0px auto;
     padding: 0px auto
 }
@@ -79,6 +63,18 @@ header{
 .icon{
     font-size: 2em;
     text-align: start;
+}
+
+select{
+    background: transparent;
+    border: none;
+    color: aliceblue;
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+option{
+    color: black;
 }
 .patients{
     display: flex;
@@ -141,7 +137,9 @@ header{
 .branches{
     display: flex;
     justify-content: space-between;
-    padding: 200px;
+    padding-left: 300px;
+    padding-top: 100px;
+    padding-bottom:  100px;
 }
 
 .branches>h1{
@@ -156,6 +154,12 @@ header{
 
 }
 
+.grid-container{
+    grid-column: 40% 60%;
+    width: 1050px;
+    padding-left: 200px;
+
+}
 .branch-logos{
     display: flex;
     flex-wrap: wrap;
@@ -164,19 +168,38 @@ header{
     list-style: none;
     width: 67%;
     height: 100px;
+    justify-content: center;
+    gap: 20px;
 }
+
+
+.branch-logos>li>img{
+    filter: grayscale(100%)
+}
+
+
+.branch-logos>li>img:hover{
+    filter: grayscale(0%)
+}
+
 
 .stats{
     display: flex;
-    padding:20px 200px ;
-    height: 600px;
-    width: 2000px;
+    padding:20px 100px ;
+    height: 800px;
     background-color: rgb(224, 245, 238);
     padding: 1.875em 0 0.625em;
-    overflow: hidden;
-    margin: 3.125rem auto 5.5rem;
+    justify-content: space-between;
+    padding-right: 100px;
 }
-
+.cards-div{
+    display: block;
+    height: 600px;
+    width: 400;
+}
+.sectaion3-headrer{
+    max-width: 50%;
+}
 .sectaion3-headrer h1{
     padding-bottom: 30px;
     padding-left: 200px;
@@ -186,9 +209,49 @@ header{
 }
 
 .sectaion3-headrer p {
-    padding-top: 150px;
+    padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 200px;
+}
+.leaders{
+    background-color: #ffffff;
+    padding: 20px;
+    height: 300px;
+    width: 200px;
+    justify-content: center;
+    font-size: small;
+    margin: 10px;
+}
+
+.appointments{
+    background-color: #ffffff;
+    padding: 20px;
+    height: 300px;
+    width: 200px;
+    justify-content: center;
+    font-size: small;
+    margin: 10px;
+
+} 
+ .patients1{
+    background-color: #ffffff;
+    padding: 20px;
+    height: 300px;
+    width: 200px;
+    justify-content: center;
+    font-size: small;
+    margin: 10px;
+
+} 
+.doctors1{
+    background-color: #ffffff;
+    padding: 20px;
+    height: 300px;
+    width: 200px;
+    justify-content: center;
+    font-size: small;
+    margin: 10px;
+
 }
 
 .office-locations{
@@ -214,7 +277,6 @@ header{
     text-transform: uppercase;
     display: inline-block;
     padding: 5px;
-    float: right; 
 }
 
 .final{
@@ -252,4 +314,122 @@ footer{
     padding: 20px;
     flex-direction: column;
     
+}
+.stats-cards{
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+@media screen and (max-width: 400px)  {
+
+    header{
+    padding: 0;
+    margin: 0;
+    }
+    .navigation{
+        padding: 0;
+    }
+    .slogen{
+        font-size: 1em;
+        padding-left: 20px;
+    }
+
+    .slogen h2{
+        width: 390px;
+    }
+    .paragraphs{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .paragraph1{
+        margin-bottom: 30px;
+        font-size: 0.8em;
+        width: 400px;
+        padding-left: 30px;
+    }
+    .paragraph2{
+        margin-bottom: 30px;
+        font-size: 0.8em;
+        width: 400px;
+        padding-left: 30px;
+    }
+    .main-section{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        size: 100%;
+    }
+
+
+    .cards-section{
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+
+    .branches{
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.6em;
+        padding-bottom: 300px;
+    }
+    .branches>h1{
+        align-items: center;
+        padding-left: 50px;
+    }
+    .branch-logos{
+        margin-left: 0;
+    }
+    .stats {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+        height: auto;
+
+    }
+    .office-locations{
+        padding-top: 50px;
+        margin-left: 0;
+        padding-left: 15px;
+    }
+
+    .stats.h1{
+        padding: 0%;
+        margin: auto;
+    }
+    .stats.p{
+        padding: 0%;
+        margin: auto;
+    }
+
+    footer{
+        align-items: center;
+        font-size: 1em;
+    }
+
+    .stats-cards{
+        display: grid;
+        grid-template-columns: 2fr;
+        height: auto;
+        font-size: 1em;
+        
+    }
+
+    .sectaion3-headrer p{
+        padding-left: 10px;
+    }
+    .sectaion3-headrer h1{
+        padding-left: 10px;
+    }
+    .grid-container{
+        padding-left: 10px;
+    }
 }
